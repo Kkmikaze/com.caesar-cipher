@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/caesar_cipher'
+
+puts "Enter the text to encrypt:"
+text = gets.chomp
+
+puts "Enter the shift value:"
+shift = gets.chomp.to_i
+
+cipher = CaesarCipher.new(shift)
+encrypted_text = cipher.encrypt(text)
+
+puts "Encrypted text: #{encrypted_text}"
